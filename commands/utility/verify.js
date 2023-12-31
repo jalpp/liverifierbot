@@ -1,8 +1,8 @@
 const { SlashCommandBuilder } = require('discord.js');
-const {isCollaborator} = require("../../githubChecker");
 const {getUserInfo} = require("../../checkGithubUser");
-const {owner, repo} = require("../../config.json");
-const {roleId} = require("../../config.json")
+const {owner} = require("../../config.json");
+const {roleId, collabUsersIds} = require("../../config.json")
+const {isCollabAcrossRepos} = require("../../iscollab")
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('verify')
@@ -11,13 +11,20 @@ module.exports = {
         .setDescription('add github user').setRequired(true)),
 	async execute(interaction) {
 		const discordID =interaction.user.id;
+        if(collabUsersIds.includes(discordID)){
+			const role = interaction.guild.roles.cache.get(roleId);
+			const discordUser = interaction.guild.members.cache.get(discordID);
+			discordUser.roles.add(role);
+            await interaction.reply('You are already a Lichess Contributor! Contributor role granted! Thanks for contributing to Lichess.');
+		}else{
+
         const member = interaction.options.getString('github-user');
-        const determineGithubStatus = await isCollaborator(owner, repo, member);
 		const determineDiscordVerification = await getUserInfo(member, discordID);
+		const checkCollabRepos = await isCollabAcrossRepos(owner, member);
 
 		if(determineDiscordVerification){
 
-			if(determineGithubStatus){
+			if(checkCollabRepos){
 				 const role = interaction.guild.roles.cache.get(roleId);
 				 const discordUser = interaction.guild.members.cache.get(discordID);
 				 discordUser.roles.add(role);
@@ -29,6 +36,8 @@ module.exports = {
 		}else{
 			await interaction.reply(`Github owner verification failed! Please add ${discordID} in your Github bio and run **/verify** again!`);
 		}
+
+	}
 	
 	},
 };
