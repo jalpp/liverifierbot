@@ -1,20 +1,20 @@
-Liverifier is Discord bot for Lichess server to give contributor role to valid contributors
+Liverifier is a Discord bot for the Lichess server to give contributor roles to valid contributors
 
 
 # Commands
 
 /ping replies with pong
-/verify [github username] verify a github user
+/verify [github username] verify a GitHub user
 /help get helpful information about how verification works
 
 
 # Notes:
-Bot take care of non dev contributors and dev contrubutors old/new everyone!
+The bot cares for non-dev contributors and dev contributors old/new everyone!
 
 # Setting up
 
 - need octokit js, discord js
-- need to create Github app and get app and key Id
+- need to create GitHub app and get the app and key ID
 - need to set up config.json to contain valid bot parameters 
 
 
