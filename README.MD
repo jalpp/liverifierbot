@@ -26,7 +26,7 @@ set the following tokens
 
     "token": "discord-token-from-app",
     "clientId": "client-id-from-discord-portal",
-    "guildId": "server-id-in-this-case-lichess-server",
+    "guildId": "server-id-in-this-case-your-server",
     "appId": "github-app-id",
     "privateKey": "doesnt matter see code for private key gen from pem file",
     "installationID": org installtion id,
