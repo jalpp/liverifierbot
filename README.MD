@@ -43,15 +43,16 @@ set the following tokens
 
     ]
 
-}```
+}
+```
 
 if you want to change how the bot acts in the verification process edit verify.js and run
 
 ``` node deploy-commands.js ```
 
-once you happy start the application
+once you are happy you can start the application
 
-``` node index.js ```
+```node index.js```
 
 # Authors
 @jalpp
