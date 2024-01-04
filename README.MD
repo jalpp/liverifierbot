@@ -16,7 +16,7 @@ The bot takes care of non-dev contributors and dev contributors old/new everyone
 install octokit.js and discord.js
 
 ``` npm i octokit ```
-``` npm i discord ```
+``` npm i discord.js ```
 
 edit config.json file
 
