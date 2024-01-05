@@ -3,9 +3,9 @@ Liverifier is a Discord bot for any Discord server to give contributor roles to 
 
 # Commands
 
-- /ping replies with pong
-- /verify [github username] verify a GitHub user
-- /help get helpful information about how verification works
+- `/ping` replies with pong
+- `/verify` [github username] verify a GitHub user
+- `/help` get helpful information about how verification works
 
 
 # Notes:
@@ -15,46 +15,20 @@ The bot takes care of non-dev contributors and dev contributors old/new everyone
 
 install octokit.js and discord.js
 
-``` npm i octokit ```
-``` npm i discord.js ```
+```npm i```
 
-edit config.json file
+create config.json file and configure settings
 
-set the following tokens
+```cp config.json.example config.json```
 
-```{
+if you want to change how the bot acts in the verification process edit `verify.js` then run
 
-    "token": "discord-token-from-app",
-    "clientId": "client-id-from-discord-portal",
-    "guildId": "server-id-in-this-case-your-server",
-    "appId": "github-app-id",
-    "privateKey": "doesnt matter see code for private key gen from pem file",
-    "installationID": org installtion id,
-    "pemfile": "your-pem-file-name",
-    "owner": "org name",
-    "repo": "test data ",
-    "roleId": "collab-role-id",
-    "repostest": ["test repos"],
-    "repos": [
-        "add repos for contributor checker"
-    ],
-    "collabUsersIds": [
-        "add your pre contributor users to by pass auth"
+```node deploy-commands.js```
 
-    ]
-
-}
-```
-
-if you want to change how the bot acts in the verification process edit verify.js and run
-
-``` node deploy-commands.js ```
-
-once you are happy you can start the application
+once Discord lists application slash commands, you can start the application
 
 ```node index.js```
 
 # Authors
 @jalpp
-
 
