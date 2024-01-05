@@ -30,5 +30,5 @@ once Discord lists application slash commands, you can start the application
 ```node index.js```
 
 # Authors
-@jalpp
+@jalpp @ddugovic
 
