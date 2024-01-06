@@ -11,7 +11,7 @@ The bot takes care of non-dev contributors and dev contributors old/new everyone
 
 # Setting up
 
-Install octokit.js and discord.js
+Install dependencies including [Octokit.js SDK](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app#using-the-octokitjs-sdk-to-authenticate-as-a-github-app)
 
 ```npm i```
 
@@ -31,7 +31,9 @@ Start the bot so you can test the `/ping` slash command
 
 ```node index.js```
 
-Do GitHub setup somehow and update `config.json`
+Create a [GitHub Application](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app) and update `config.json`
+
+Create a [GitHub JSON Web Token](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app#generating-a-json-web-token-jwt) and update `config.json`
 
 # Authors
 @jalpp @ddugovic
