@@ -9,7 +9,6 @@
     "owner": "org name",
     "repo": "test data",
     "roleId": "collab-role-id",
-    "repostest": ["test repos"],
     "repos": [
         "add repos for contributor checker"
     ],
