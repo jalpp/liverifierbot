@@ -4,13 +4,13 @@
     "guildId": "server-id-in-this-case-your-server",
     "appId": "github-app-id",
     "privateKey": "doesnt matter see code for private key gen from pem file",
-    "installationID": org installation id,
+    "installationID": "org installation id",
     "pemfile": "your-pem-file-name",
     "owner": "org name",
     "repo": "test data",
     "roleId": "collab-role-id",
     "repos": [
-        "add repos for contributor checker"
+        "https://github.com/lichess-org/lila"
     ],
     "collabUsersIds": [
         "add your pre contributor users to by pass auth"
