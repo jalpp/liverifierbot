@@ -1,8 +1,8 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { getUserInfo } = require('../../checkGithubUser');
-const { owner } = require('../../config.json');
-const { roleId, collabUsersIds } = require('../../config.json')
-const { isCollabAcrossRepos } = require('../../iscollab')
+const { getUserInfo } = require('../checkGithubUser');
+const { owner } = require('../config.json');
+const { roleId, collabUsersIds } = require('../config.json')
+const { isCollabAcrossRepos } = require('../iscollab')
 
 module.exports = {
 	data: new SlashCommandBuilder()
