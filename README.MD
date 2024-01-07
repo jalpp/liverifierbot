@@ -4,7 +4,7 @@ Liverifier is a Discord bot for any Discord server to give contributor roles to 
 
 - `/ping` replies with pong
 - `/verify` [github username] verify a GitHub user
-- `/help` get helpful information about how verification works
+- `/help` get helpful information about how contributor role verification works
 
 # Notes
 The bot takes care of non-dev contributors and dev contributors old/new everyone!

@@ -1,5 +1,5 @@
 const {isCollaborator} = require("./githubChecker")
-const {repostest} = require("./config.json")
+const {repos} = require("./config.json")
 
 async function isCollabAcrossRepos(owner, username) {
 
@@ -7,8 +7,8 @@ async function isCollabAcrossRepos(owner, username) {
 
     let r = 0;
 
-    while(r < repostest.length){
-        const check = await isCollaborator(owner, repostest[r], username);
+    while(r < repos.length){
+        const check = await isCollaborator(owner, repos[r], username);
         iscollabconditionholder.push(check);
         r++;
     }
